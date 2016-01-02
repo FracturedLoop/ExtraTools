@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "extratools:blocks/jumpBooster",
+        "side": "extratools:blocks/jumpBoosterSide"
+    }
+}
