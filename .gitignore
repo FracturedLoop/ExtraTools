@@ -20,3 +20,10 @@ build
 # other
 eclipse
 run
+logs/
+crash-reports/
+saves/
+usernamecache.json
+options.txt
+README.txt
+forge-1.8-11.14.4.1563-changelog.txt
