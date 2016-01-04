@@ -121,22 +121,32 @@ public class ExtraToolsEventHandler {
 	 	EntityPlayer player = event.player; 
 	 	if (player.getCurrentArmor(0) != null) {
 	 		if (player.getCurrentArmor(0).getItem() == ModItems.hoverBoots) {
-	 			if (player.isSneaking()) {
-	 				player.motionY = -0.1;
-	 			}
+	 			
+	 			 if (player.isSneaking() && player.motionY <= 0.1 && player.worldObj.getBlockState(twoUnderPlayer).getBlock() != Blocks.air) {
+	 				if (player.motionY < -0.2) {
+	 				 player.motionY += 0.1;
+	 				}
+	 				else {
+	 					player.motionY = -0.1;
+	 				}
+	 			 }
+	 			
 	 			else if (!(player.worldObj.getBlockState(underPlayer).getBlock() == Blocks.air)) {
-	 				player.motionY = 0.1;
+	 				if (player.motionY <= 0.3) {
+	 				player.motionY += 0.1;
+	 				}
+	 				else {
+	 					player.motionY = 0.3;
+	 				}
 	 			} 
-	 			else if (player.worldObj.getBlockState(twoUnderPlayer).getBlock() == Blocks.air) {
-	 				player.motionY = -0.1;
-	 			}
 			 
-	 			else if ((player.posY - underPlayer.getY() >= 0.8 && player.posY - underPlayer.getY() <= 1.2) && player.motionY <= 0.1) {
+	 			else if ((player.posY - underPlayer.getY() >= 0.8 && player.posY - underPlayer.getY() <= 1.2) && player.worldObj.getBlockState(twoUnderPlayer).getBlock() != Blocks.air && player.motionY <= 0.1) {
 	 				player.motionY = 0;
-	 			}
+	 			} 
 			
-	 		} 
-	 	}
+	 		}
+	 	} 
+	 	
 			
 			
 	 		
