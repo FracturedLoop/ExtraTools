@@ -32,6 +32,8 @@ public class ExtraTools {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
+    	FMLCommonHandler.instance().bus().register(new KeyInputHandler());
+    	KeyBindings.init();
     	ModItems.registerItems();
     	ModBlocks.registerBlocks();
     }

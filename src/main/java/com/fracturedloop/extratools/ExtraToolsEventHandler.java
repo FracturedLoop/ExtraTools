@@ -14,7 +14,8 @@ import com.fracturedloop.extratools.init.ModItems;
 public class ExtraToolsEventHandler {
 	
 	public static boolean hasLevitated;
-
+	public static boolean hoverBootsOn;
+	
 	@SubscribeEvent
     public void bounce(LivingJumpEvent event) {
     	if (!(event.entity instanceof EntityPlayer)) {
@@ -115,35 +116,26 @@ public class ExtraToolsEventHandler {
 	
 	@SubscribeEvent
 	public void hover(PlayerTickEvent event) {
-		
 		BlockPos underPlayer = new BlockPos((int) Math.floor(event.player.posX), (int) event.player.posY - 1, (int) Math.floor(event.player.posZ));
 	 	BlockPos twoUnderPlayer = new BlockPos((int) Math.floor(event.player.posX), (int) event.player.posY - 2, (int) Math.floor(event.player.posZ));
 	 	EntityPlayer player = event.player; 
 	 	if (player.getCurrentArmor(0) != null) {
 	 		if (player.getCurrentArmor(0).getItem() == ModItems.hoverBoots) {
+	 				if (hoverBootsOn == true) {
+//	 					if (player.isSneaking()) {
+//	 						player.motionY = -0.1;
+//	 					}
 	 			
-	 			 if (player.isSneaking() && player.motionY <= 0.1 && player.worldObj.getBlockState(twoUnderPlayer).getBlock() != Blocks.air) {
-	 				if (player.motionY < -0.2) {
-	 				 player.motionY += 0.1;
-	 				}
-	 				else {
-	 					player.motionY = -0.1;
-	 				}
-	 			 }
-	 			
-	 			else if (!(player.worldObj.getBlockState(underPlayer).getBlock() == Blocks.air)) {
-	 				if (player.motionY <= 0.3) {
-	 				player.motionY += 0.1;
-	 				}
-	 				else {
-	 					player.motionY = 0.3;
-	 				}
-	 			} 
+	 					if (!(player.worldObj.getBlockState(underPlayer).getBlock() == Blocks.air)) {
+	 						player.motionY = (1 - (player.posY - Math.floor(player.posY))) / 5;
+	 						if (player.motionY < 0.03) player.motionY = 0.03;
+	 					} 
 			 
-	 			else if ((player.posY - underPlayer.getY() >= 0.8 && player.posY - underPlayer.getY() <= 1.2) && player.worldObj.getBlockState(twoUnderPlayer).getBlock() != Blocks.air && player.motionY <= 0.1) {
-	 				player.motionY = 0;
-	 			} 
+	 					else if ((player.posY - underPlayer.getY() >= 1.0 && player.posY - underPlayer.getY() <= 1.1) && player.worldObj.getBlockState(twoUnderPlayer).getBlock() != Blocks.air && player.motionY <= 0.1) {
+	 						player.motionY = 0;
+	 					} 
 			
+	 				}
 	 		}
 	 	} 
 	 	
@@ -152,6 +144,9 @@ public class ExtraToolsEventHandler {
 	 		
 	} 
 	
+	
+	
+
 	/*@SubscribeEvent
 	public void increaseHoverSpeed(PlayerTickEvent event) {
 		EntityPlayer player = event.player;
