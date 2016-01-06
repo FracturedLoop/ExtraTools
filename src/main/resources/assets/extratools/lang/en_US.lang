@@ -13,3 +13,7 @@ tile.jumpBooster.name=Jump Booster
 tile.levitatorBlock.name=Levitator
 
 itemGroup.tabExtraTools=ExtraTools
+
+extratools.category.extratools=ExtraTools
+
+key.hoverBoots=Hover Boots

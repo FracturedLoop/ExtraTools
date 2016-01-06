@@ -10,12 +10,10 @@ public class KeyBindings {
 	public static KeyBinding hoverBoots;
 	
 	public static void init() {
-        // Define the "jump" binding, with (unlocalized) name "key.ping" and
-        // the category with (unlocalized) name "key.categories.mymod" and
-        // key code 24 ("O", LWJGL constant: Keyboard.KEY_O)
-        hoverBoots = new KeyBinding("key.hoverBoots", Keyboard.KEY_H, "key.categories.ExtraTools");
+        //set the keybinding
+        hoverBoots = new KeyBinding("key.hoverBoots", Keyboard.KEY_H, "ExtraTools");
 
-        // Register both KeyBindings to the ClientRegistry
+        // Register the KeyBinding to the ClientRegistry
         ClientRegistry.registerKeyBinding(hoverBoots);
 	}
 }

@@ -22,6 +22,7 @@ public class ExtraToolsEventHandler {
 	private boolean wasJumping = false;
 	private boolean tempJump;
 	
+	//this is for the jump booster block
 	@SubscribeEvent
     public void bounce(LivingJumpEvent event) {
     	if (!(event.entity instanceof EntityPlayer)) {
@@ -68,7 +69,7 @@ public class ExtraToolsEventHandler {
 
     }
 	
-	
+	//This is for the levitator block
 	@SubscribeEvent
 	public void levitate(PlayerTickEvent event) {
 		
@@ -110,7 +111,7 @@ public class ExtraToolsEventHandler {
 			return;
 		}
 	}
-	
+	//this is for the levitator block too
 	@SubscribeEvent
 	public void negateFallDamage(LivingFallEvent event) {
 		if (hasLevitated == true) {
@@ -121,7 +122,7 @@ public class ExtraToolsEventHandler {
 	}
 	
 	
-	
+	//this is for the hoverboots
 	@SubscribeEvent
 	public void hover(PlayerTickEvent event) {
 		BlockPos underPlayer = new BlockPos((int) Math.floor(event.player.posX), (int) event.player.posY - 1, (int) Math.floor(event.player.posZ));
