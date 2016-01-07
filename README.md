@@ -1,4 +1,4 @@
-##ExtraTools Mod
+##VariousThings Mod
 
 My WIP mod that adds some useful things:  
 *Jump Boosters  
@@ -6,6 +6,7 @@ My WIP mod that adds some useful things:
 *Blazing Diamonds  
 *Blazing Diamond Tools  
 *Levitators  
+*Hover Boots  
 *And More to Come!  
 
 
