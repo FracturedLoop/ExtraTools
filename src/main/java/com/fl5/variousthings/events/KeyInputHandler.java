@@ -1,4 +1,6 @@
-package com.fl5.variousthings;
+package com.fl5.variousthings.events;
+
+import com.fl5.variousthings.KeyBindings;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;

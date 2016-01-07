@@ -5,10 +5,10 @@
   "description": "A mod that adds various things.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/FracturedLoop/VariousThings",
   "updateUrl": "",
   "authorList": ["FracturedLoop", "CS-5"],
-  "credits": "The Forge and FML guys, for making this example",
+  "credits": "The Forge and FML guys, for making this possible",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

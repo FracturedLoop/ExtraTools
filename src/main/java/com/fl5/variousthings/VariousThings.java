@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.fl5.variousthings.crafting.Recipes;
+import com.fl5.variousthings.events.KeyInputHandler;
+import com.fl5.variousthings.events.VariousThingsEventHandler;
 import com.fl5.variousthings.help.Reference;
 import com.fl5.variousthings.init.VariousThingsBlocks;
 import com.fl5.variousthings.init.VariousThingsItems;

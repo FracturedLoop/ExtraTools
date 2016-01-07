@@ -1,4 +1,4 @@
-package com.fl5.variousthings;
+package com.fl5.variousthings.events;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
