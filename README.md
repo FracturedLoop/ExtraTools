@@ -8,6 +8,6 @@ My WIP mod that adds some useful things:
 *Levitators  
 *Hover Boots  
 *And More to Come!  
-
-
-
+___
+Currently runs on:  
+*Minecraft 1.8
