@@ -13,6 +13,7 @@ import com.fl5.variousthings.items.BlazingPickaxe;
 import com.fl5.variousthings.items.BlazingShovel;
 import com.fl5.variousthings.items.BlazingSword;
 import com.fl5.variousthings.items.FallBoots;
+import com.fl5.variousthings.items.NightGoggles;
 
 public final class VariousThingsItems {
 
@@ -21,7 +22,7 @@ public final class VariousThingsItems {
 	public static ToolMaterial BLAZINGDIAMOND = EnumHelper.addToolMaterial("BLAZINGDIAMOND", 3, 2000, 14.0F, 4.0F, 20);
 	public static ArmorMaterial FALLBOOTS = EnumHelper.addArmorMaterial("FALLBOOTS", "variousthings:fallBoots", -1, new int[]{4, 8, 7, 4}, 15);
 	public static ArmorMaterial HOVERBOOTS = EnumHelper.addArmorMaterial("HOVERBOOTS", "variousthings:hoverBoots", -1, new int[]{4, 8, 7, 4}, 15);
-
+	public static ArmorMaterial NIGHTGOGGLES = EnumHelper.addArmorMaterial("NIGHTGOGGLES", "variousthings:nightGoggles", 2000, new int[]{4, 8, 7, 4}, 15);
 	
 	public static Item blazingDiamond = new BlazingDiamond("blazingDiamond").setUnlocalizedName("blazingDiamond");
 	
@@ -31,7 +32,10 @@ public final class VariousThingsItems {
 	public static Item blazingPickaxe = new BlazingPickaxe(BLAZINGDIAMOND).setUnlocalizedName("blazingPickaxe");
 	
 	public static Item fallBoots = new FallBoots(FALLBOOTS, 1, 3).setUnlocalizedName("fallBoots");
-	public static Item hoverBoots = new FallBoots(HOVERBOOTS, 1, 3).setUnlocalizedName("hoverBoots");
+	public static Item hoverBoots = new FallBoots(HOVERBOOTS, 1, 1).setUnlocalizedName("hoverBoots");
+	
+	public static Item nightGoggles = new NightGoggles(NIGHTGOGGLES, 0, 0).setUnlocalizedName("nightGoggles");
+
 
 	
     public static void registerItems() {
@@ -43,6 +47,7 @@ public final class VariousThingsItems {
     	RegisterHelper.registerItem(blazingPickaxe);
     	RegisterHelper.registerItem(fallBoots);
     	RegisterHelper.registerItem(hoverBoots);
+    	RegisterHelper.registerItem(nightGoggles);
     }
     
     public static void registerItemRenderer()
@@ -55,5 +60,6 @@ public final class VariousThingsItems {
     	RegisterHelper.registerItemRenderer(blazingPickaxe);
     	RegisterHelper.registerItemRenderer(fallBoots);
     	RegisterHelper.registerItemRenderer(hoverBoots);
+    	RegisterHelper.registerItemRenderer(nightGoggles);
     }
 }

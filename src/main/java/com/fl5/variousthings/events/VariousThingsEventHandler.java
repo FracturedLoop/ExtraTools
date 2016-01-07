@@ -133,15 +133,19 @@ public class VariousThingsEventHandler {
 	 					
 	 					MovementInput input = Minecraft.getMinecraft().thePlayer.movementInput;
 	 					
+	 					player.capabilities.setFlySpeed(0.1F);
+	 					player.capabilities.setPlayerWalkSpeed(0.15F);
+	 					
 	 					tempJump = input.jump;
-	 				    if (input.jump && !wasJumping && !hasJumped) {
+	 					if (input.sneak) {
+	 						player.motionY = -0.2;
+	 					}
+	 					
+	 					else if (input.jump && !wasJumping && !hasJumped) {
 	 						player.jump();
 	 						hasJumped = true;
 	 					}
 	 					
-	 					else if (input.sneak) {
-	 						player.motionY = -0.2;
-	 					}
 	 					//float up and decrease speed to a graceful stop
 	 					else if (!(player.worldObj.getBlockState(underPlayer).getBlock() == Blocks.air)) {
 	 						player.motionY = (1 - (player.posY - Math.floor(player.posY))) / 5;
@@ -155,6 +159,16 @@ public class VariousThingsEventHandler {
 	 					} 
 			
 	 				}
+	 				
+	 				else {
+	 					player.capabilities.setFlySpeed(0.05F);
+	 					player.capabilities.setPlayerWalkSpeed(0.125F);
+	 				}
+	 		}
+	 		
+	 		else {
+	 			player.capabilities.setFlySpeed(0.05F);
+					player.capabilities.setPlayerWalkSpeed(0.1F);
 	 		}
 	 	} 
 	 	

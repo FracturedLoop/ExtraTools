@@ -23,9 +23,10 @@ public class Recipes {
 		GameRegistry.addShapedRecipe(new ItemStack(VariousThingsItems.blazingSword), new Object [] {" A ", " A ", " B ", 'A', blazingDiamond, 'B', stick});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(VariousThingsItems.fallBoots), new Object [] {"OOO", "ODO", "OSO", 'O', obsidian, 'D', Items.diamond_boots, 'S', Items.slime_ball});
+		GameRegistry.addShapedRecipe(new ItemStack(VariousThingsItems.hoverBoots), new Object [] {"OFO", "OLO", "BJB", 'O', obsidian, 'F', VariousThingsItems.fallBoots, 'L', VariousThingsBlocks.levitatorBlock, 'B', Items.blaze_powder, 'J', VariousThingsBlocks.jumpBooster});
 		
 		GameRegistry.addShapedRecipe(new ItemStack(VariousThingsBlocks.jumpBooster), new Object [] {"ACA", "BCB", "BBB", 'A', Items.slime_ball, 'B', Items.iron_ingot, 'C', Blocks.piston});
-		
+		GameRegistry.addShapedRecipe(new ItemStack(VariousThingsBlocks.levitatorBlock), new Object [] {"BFB", "OGO", "OOO", 'B', Blocks.iron_bars, 'F', Items.feather, 'O', obsidian, 'G', Items.ghast_tear});
 	}
 	
 }
