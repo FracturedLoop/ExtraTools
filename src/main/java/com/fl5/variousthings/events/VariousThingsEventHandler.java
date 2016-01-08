@@ -147,7 +147,7 @@ public class VariousThingsEventHandler {
 	 					}
 	 					
 	 					//float up and decrease speed to a graceful stop
-	 					else if (!(player.worldObj.getBlockState(underPlayer).getBlock() == Blocks.air)) {
+	 					else if ((player.worldObj.getBlockState(underPlayer).getBlock().isFullBlock())) {
 	 						player.motionY = (1 - (player.posY - Math.floor(player.posY))) / 5;
 	 						if (player.motionY < 0.03) player.motionY = 0.03;
 	 						hasJumped = false;
@@ -156,6 +156,7 @@ public class VariousThingsEventHandler {
 	 					//stop once desired height has been reached
 	 					else if ((player.posY - underPlayer.getY() >= 1.0 && player.posY - underPlayer.getY() <= 1.1) && player.worldObj.getBlockState(twoUnderPlayer).getBlock() != Blocks.air && player.motionY <= 0.1) {
 	 						player.motionY = 0;
+	 						hasJumped = false;
 	 					} 
 			
 	 				}

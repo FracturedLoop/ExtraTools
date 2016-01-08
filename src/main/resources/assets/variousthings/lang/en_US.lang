@@ -2,6 +2,7 @@ item.runnerDude.name=Runner Dude
 item.blazingDiamond.name=Blazing Diamond
 item.fallBoots.name=Shock-Absorbing Boots
 item.hoverBoots.name=Hover Boots
+item.nightGoggles.name=Night-Vision Goggles
 
 
 
@@ -11,6 +12,7 @@ item.blazingAxe.name=Blazing Axe
 item.blazingPickaxe.name=Blazing Pickaxe
 tile.jumpBooster.name=Jump Booster
 tile.levitatorBlock.name=Levitator
+tile.encasedTorch.name=Encased Torch
 
 itemGroup.tabVariousThings=ExtraTools
 
