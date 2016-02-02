@@ -16,7 +16,6 @@ public class KeyInputHandler {
             else {
             	VariousThingsEventHandler.hoverBootsOn = true;
             }
-        	System.out.println("HoverBoots on = " + VariousThingsEventHandler.hoverBootsOn);
         }
     }
 }

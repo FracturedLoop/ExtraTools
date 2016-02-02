@@ -1,21 +1,27 @@
-item.runnerDude.name=Runner Dude
-item.blazingDiamond.name=Blazing Diamond
-item.fallBoots.name=Shock-Absorbing Boots
-item.hoverBoots.name=Hover Boots
-item.nightGoggles.name=Night-Vision Goggles
+item.runner_dude.name=Runner Dude
+item.blazing_diamond.name=Blazing Diamond
+item.fall_boots.name=Shock-Absorbing Boots
+item.hover_boots.name=Hover Boots
+item.night_goggles.name=Night-Vision Goggles
 
 
 
-item.blazingSword.name=Blazing Sword
-item.blazingShovel.name=Blazing Shovel
-item.blazingAxe.name=Blazing Axe
-item.blazingPickaxe.name=Blazing Pickaxe
-tile.jumpBooster.name=Jump Booster
-tile.levitatorBlock.name=Levitator
-tile.encasedTorch.name=Encased Torch
+item.blazing_sword.name=Blazing Sword
+item.blazing_shovel.name=Blazing Shovel
+item.blazing_axe.name=Blazing Axe
+item.blazing_pickaxe.name=Blazing Pickaxe
+
+item.proto_sword.name=ProtoSword
+
+tile.jump_booster.name=Jump Booster
+tile.levitator.name=Levitator
+tile.encased_torch.name=Encased Torch
+tile.ender_summoner.name=Ender Summoner
 
 itemGroup.tabVariousThings=ExtraTools
 
-variousthings=ExtraTools
+variousthings=VariousThings
 
-key.hoverBoots=Hover Boots
+key.hover_boots=Hover Boots
+
+container.item_display.name=Item Display

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "variousthings:blocks/levitator",
+        "side": "variousthings:blocks/levitator_side"
+    }
+}

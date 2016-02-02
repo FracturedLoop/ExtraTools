@@ -2,10 +2,30 @@ package com.fl5.variousthings.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 
 import com.fl5.variousthings.tabs.VaiousThingsTabs;
 
 public class EncasedTorch extends Block {
+	
+	 @Override
+	    public boolean isOpaqueCube() {
+			return false;
+	    }
+	    
+	    @Override
+	    public boolean isFullCube() {
+	    	return false;
+	    }
+	    
+	    @Override
+	    public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
+	    	return false;
+	    }
+	    
+	
     public EncasedTorch(float hardness, float resistance, String harvestType, int harvestLevel, float lightLevel) {
         super(Material.glass); // experiment with different material types
         this.setCreativeTab(VaiousThingsTabs.tabVariousThings);
@@ -14,10 +34,8 @@ public class EncasedTorch extends Block {
         this.setResistance(resistance); // resistance to explosives
         this.setHarvestLevel(harvestType, harvestLevel); // what can break/what material can break
         this.setLightLevel(lightLevel); // light emitted (e.g. glowstone)
+        this.setLightOpacity(1);
     }
     
-    @Override
-    public boolean isOpaqueCube() {
-		return false;
-    }
+   
 }

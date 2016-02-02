@@ -9,13 +9,16 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.fl5.variousthings.crafting.Recipes;
 import com.fl5.variousthings.events.KeyInputHandler;
 import com.fl5.variousthings.events.VariousThingsEventHandler;
+import com.fl5.variousthings.gui.GuiHandler;
 import com.fl5.variousthings.help.Reference;
 import com.fl5.variousthings.init.VariousThingsBlocks;
 import com.fl5.variousthings.init.VariousThingsItems;
+import com.fl5.variousthings.init.VariousThingsTileEntities;
 import com.fl5.variousthings.proxies.CommonProxy;
 
 @Mod(modid = VariousThings.MODID, name = VariousThings.MODNAME, version = VariousThings.VERSION)
@@ -38,6 +41,7 @@ public class VariousThings {
     	KeyBindings.init();
     	VariousThingsItems.registerItems();
     	VariousThingsBlocks.registerBlocks();
+    	VariousThingsTileEntities.init();
     }
 
     @EventHandler
@@ -46,6 +50,7 @@ public class VariousThings {
     	
     	proxy.registerRenderers();
     	Recipes.init();
+    	NetworkRegistry.INSTANCE.registerGuiHandler(VariousThings.instance, new GuiHandler());
     }
 
     @EventHandler

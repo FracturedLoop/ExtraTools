@@ -21,7 +21,7 @@ public class VariousThingsTab extends CreativeTabs {
 	{
 		if (this.name == "tabVariousThings") 
 		{
-			return VariousThingsItems.blazingSword;
+			return VariousThingsItems.blazing_sword;
 		}
 		return null;
 	}

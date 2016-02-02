@@ -36,19 +36,19 @@ public class VariousThingsEventHandler {
     	int blocksUnder = 1;
     	
     	float jumpMultiplier = 1;
-    	if (event.entity.worldObj.getBlockState(underPlayer).getBlock() == VariousThingsBlocks.jumpBooster) {
+    	if (event.entity.worldObj.getBlockState(underPlayer).getBlock() == VariousThingsBlocks.jump_booster) {
     		currentSearch = underPlayer;
     		blocksUnder = 1;
     		
     	}
 
-    	else if (event.entity.worldObj.getBlockState(twoUnderPlayer).getBlock() == VariousThingsBlocks.jumpBooster) {
+    	else if (event.entity.worldObj.getBlockState(twoUnderPlayer).getBlock() == VariousThingsBlocks.jump_booster) {
     		currentSearch = twoUnderPlayer;
     		blocksUnder = 2;
 
     	
     	}
-    	else if (((EntityPlayer) event.entity).getCurrentArmor(0) != null && ((EntityPlayer) event.entity).getCurrentArmor(0).getItem() == VariousThingsItems.hoverBoots && hoverBootsOn == true) {
+    	else if (((EntityPlayer) event.entity).getCurrentArmor(0) != null && ((EntityPlayer) event.entity).getCurrentArmor(0).getItem() == VariousThingsItems.hover_boots && hoverBootsOn == true) {
     	 			
     	 		currentSearch = threeUnderPlayer;
         		blocksUnder = 3;
@@ -60,7 +60,7 @@ public class VariousThingsEventHandler {
     		return;
     	}
     	
-    	while(event.entity.worldObj.getBlockState(currentSearch).getBlock() == VariousThingsBlocks.jumpBooster) {
+    	while(event.entity.worldObj.getBlockState(currentSearch).getBlock() == VariousThingsBlocks.jump_booster) {
 			jumpMultiplier += 0.5;
 			blocksUnder += 1;
 			currentSearch = new BlockPos((int) Math.floor(event.entity.posX), (int) Math.floor(event.entity.posY) - blocksUnder, (int) Math.floor(event.entity.posZ));
@@ -80,30 +80,30 @@ public class VariousThingsEventHandler {
 		BlockPos threeUnderPlayer = new BlockPos((int) Math.floor(event.player.posX), (int) Math.floor(event.player.posY) - 3, (int) Math.floor(event.player.posZ));
 		BlockPos fourUnderPlayer = new BlockPos((int) Math.floor(event.player.posX), (int) Math.floor(event.player.posY) - 4, (int) Math.floor(event.player.posZ));
 		EntityPlayer player = event.player;
-		BlockPos levitatorBlock = null;
+		BlockPos levitator = null;
 		
-		if ((event.player.worldObj.getBlockState(twoUnderPlayer).getBlock() == VariousThingsBlocks.levitatorBlock || event.player.worldObj.getBlockState(underPlayer).getBlock() == VariousThingsBlocks.levitatorBlock || event.player.worldObj.getBlockState(threeUnderPlayer).getBlock() == VariousThingsBlocks.levitatorBlock || event.player.worldObj.getBlockState(fourUnderPlayer).getBlock() == VariousThingsBlocks.levitatorBlock)) {
+		if ((event.player.worldObj.getBlockState(twoUnderPlayer).getBlock() == VariousThingsBlocks.levitator || event.player.worldObj.getBlockState(underPlayer).getBlock() == VariousThingsBlocks.levitator || event.player.worldObj.getBlockState(threeUnderPlayer).getBlock() == VariousThingsBlocks.levitator || event.player.worldObj.getBlockState(fourUnderPlayer).getBlock() == VariousThingsBlocks.levitator)) {
 			
-			if (event.player.worldObj.getBlockState(underPlayer).getBlock() == VariousThingsBlocks.levitatorBlock) {
-				levitatorBlock = underPlayer;
+			if (event.player.worldObj.getBlockState(underPlayer).getBlock() == VariousThingsBlocks.levitator) {
+				levitator = underPlayer;
 			}
-			else if (event.player.worldObj.getBlockState(twoUnderPlayer).getBlock() == VariousThingsBlocks.levitatorBlock){
-				levitatorBlock = twoUnderPlayer;
+			else if (event.player.worldObj.getBlockState(twoUnderPlayer).getBlock() == VariousThingsBlocks.levitator){
+				levitator = twoUnderPlayer;
 			}
-			else if (event.player.worldObj.getBlockState(threeUnderPlayer).getBlock() == VariousThingsBlocks.levitatorBlock){
-				levitatorBlock = threeUnderPlayer;
+			else if (event.player.worldObj.getBlockState(threeUnderPlayer).getBlock() == VariousThingsBlocks.levitator){
+				levitator = threeUnderPlayer;
 			}
 			else {
-				levitatorBlock = fourUnderPlayer;
+				levitator = fourUnderPlayer;
 			}
 			
 			if (player.isSneaking()) {
 				player.motionY = -0.2;				
 			}
-			else if (player.posY - 2 - levitatorBlock.getY() >= 2.8 && player.posY - 2 - levitatorBlock.getY() <= 3.0) {
+			else if (player.posY - 2 - levitator.getY() >= 2.8 && player.posY - 2 - levitator.getY() <= 3.0) {
 				player.motionY = 0;
 			}
-			else if (player.posY - 2 - levitatorBlock.getY() < 2.8) {
+			else if (player.posY - 2 - levitator.getY() < 2.8) {
 				player.motionY = 0.2;
 			}
 			hasLevitated = true;
@@ -128,7 +128,7 @@ public class VariousThingsEventHandler {
 	 	BlockPos twoUnderPlayer = new BlockPos((int) Math.floor(event.player.posX), (int) event.player.posY - 2, (int) Math.floor(event.player.posZ));
 	 	EntityPlayer player = event.player; 
 	 	if (player.getCurrentArmor(0) != null) {
-	 		if (player.getCurrentArmor(0).getItem() == VariousThingsItems.hoverBoots) {
+	 		if (player.getCurrentArmor(0).getItem() == VariousThingsItems.hover_boots) {
 	 				if (hoverBootsOn == true) {
 	 					
 	 					MovementInput input = Minecraft.getMinecraft().thePlayer.movementInput;
@@ -176,6 +176,7 @@ public class VariousThingsEventHandler {
 	 	wasJumping = tempJump;
 	 		
 	} 
+	
 	 
 	
 	
