@@ -2,10 +2,10 @@ package com.fl5.variousthings.init;
 
 import net.minecraft.block.Block;
 
-import com.fl5.variousthings.blocks.BasicBlock;
-import com.fl5.variousthings.blocks.BlockItemDisplay;
-import com.fl5.variousthings.blocks.EncasedTorch;
-import com.fl5.variousthings.blocks.EnderSummoner;
+import com.fl5.variousthings.block.BasicBlock;
+import com.fl5.variousthings.block.BlockItemDisplay;
+import com.fl5.variousthings.block.BlockEncasedTorch;
+import com.fl5.variousthings.block.BlockEnderSummoner;
 import com.fl5.variousthings.helpers.RegisterHelper;
 
 public class VariousThingsBlocks {
@@ -13,9 +13,9 @@ public class VariousThingsBlocks {
 	public static Block jump_booster = new BasicBlock(1.0F, 3.0F, "pickaxe", 1, 0F).setUnlocalizedName("jump_booster");
 	public static Block levitator = new BasicBlock(1.0F, 3.0F, "pickaxe", 1, 0F).setUnlocalizedName("levitator");
 	
-	public static Block encased_torch = new EncasedTorch(1.0F, 3.0F, "pickaxe", 0, 0.875F).setUnlocalizedName("encased_torch");
+	public static Block encased_torch = new BlockEncasedTorch(1.0F, 3.0F, "pickaxe", 0, 0.875F).setUnlocalizedName("encased_torch");
 	
-	public static Block ender_summoner = new EnderSummoner().setUnlocalizedName("ender_summoner");
+	public static Block ender_summoner = new BlockEnderSummoner().setUnlocalizedName("ender_summoner");
 	
 	public static Block item_display = new BlockItemDisplay().setUnlocalizedName("item_display");
 	public static void registerBlocks() {

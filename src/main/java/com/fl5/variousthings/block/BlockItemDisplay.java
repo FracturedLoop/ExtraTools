@@ -1,4 +1,4 @@
-package com.fl5.variousthings.blocks;
+package com.fl5.variousthings.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -31,7 +31,7 @@ public class BlockItemDisplay extends Block implements ITileEntityProvider {
         this.setResistance(3000); // resistance to explosives
         this.setHarvestLevel("pickaxe", 3); // what can break/what material can break
         this.setLightLevel(0); // light emitted (e.g. glowstone)
-        this.setBlockBounds(0.375F, 0.375F, 0.375F, 0.625F, 0.625F, 0.625F);
+        this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.25F, 1.0F);
 	}
 
 	@Override
@@ -50,11 +50,11 @@ public class BlockItemDisplay extends Block implements ITileEntityProvider {
 		playerIn.openGui(VariousThings.instance, GuiHandler.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
 		return true;
 	}
-	@Override
-	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
-    {
-        return null;
-    }
+//	@Override
+//	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
+//    {
+//        return null;
+//    }
 
 	// This is where you can do something when the block is broken. In this case drop the inventory's contents
 	@Override

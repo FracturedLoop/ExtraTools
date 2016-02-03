@@ -1,20 +1,20 @@
-package com.fl5.variousthings.items;
+package com.fl5.variousthings.item;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.fl5.variousthings.tabs.VaiousThingsTabs;
 
-public class ItemBlazingAxe extends ItemAxe
+public class ItemBlazingPickaxe extends ItemPickaxe
 {
 	public final ToolMaterial toolMaterial;
 	
 	
 	
-	public ItemBlazingAxe(ToolMaterial BLAZINGDIAMOND)
+	public ItemBlazingPickaxe(ToolMaterial BLAZINGDIAMOND)
 	{
 		super(BLAZINGDIAMOND);
 		toolMaterial = BLAZINGDIAMOND;

@@ -1,4 +1,4 @@
-package com.fl5.variousthings.blocks;
+package com.fl5.variousthings.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -8,7 +8,7 @@ import net.minecraft.world.IBlockAccess;
 
 import com.fl5.variousthings.tabs.VaiousThingsTabs;
 
-public class EncasedTorch extends Block {
+public class BlockEncasedTorch extends Block {
 	
 	 @Override
 	    public boolean isOpaqueCube() {
@@ -26,7 +26,7 @@ public class EncasedTorch extends Block {
 	    }
 	    
 	
-    public EncasedTorch(float hardness, float resistance, String harvestType, int harvestLevel, float lightLevel) {
+    public BlockEncasedTorch(float hardness, float resistance, String harvestType, int harvestLevel, float lightLevel) {
         super(Material.glass); // experiment with different material types
         this.setCreativeTab(VaiousThingsTabs.tabVariousThings);
         this.setStepSound(soundTypeGlass);

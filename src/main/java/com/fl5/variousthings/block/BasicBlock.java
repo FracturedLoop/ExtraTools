@@ -1,4 +1,4 @@
-package com.fl5.variousthings.blocks;
+package com.fl5.variousthings.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

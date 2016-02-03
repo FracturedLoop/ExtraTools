@@ -1,4 +1,4 @@
-package com.fl5.variousthings.items;
+package com.fl5.variousthings.item;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;

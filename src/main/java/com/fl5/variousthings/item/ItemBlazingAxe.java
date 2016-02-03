@@ -1,23 +1,26 @@
-package com.fl5.variousthings.items;
+package com.fl5.variousthings.item;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemFlintAndSteel;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.fl5.variousthings.tabs.VaiousThingsTabs;
 
-public class ItemBlazingDiamond extends ItemFlintAndSteel
+public class ItemBlazingAxe extends ItemAxe
 {
+	public final ToolMaterial toolMaterial;
 	
-	public ItemBlazingDiamond(String name)
+	
+	
+	public ItemBlazingAxe(ToolMaterial BLAZINGDIAMOND)
 	{
-		super();
+		super(BLAZINGDIAMOND);
+		toolMaterial = BLAZINGDIAMOND;
 		setCreativeTab(VaiousThingsTabs.tabVariousThings);
-		this.setMaxDamage(-1);
+		
+		
 		
 	}
 	
@@ -25,13 +28,6 @@ public class ItemBlazingDiamond extends ItemFlintAndSteel
 		if(itemstack.isItemEnchanted() == false) {
 			itemstack.addEnchantment(Enchantment.fireAspect, 3);
 		}
-	}
-	
-	@Override
-	public boolean itemInteractionForEntity(ItemStack BlazingDiamond, EntityPlayer player, EntityLivingBase target)
-	{
-			 target.setFire(8);;
-			 return true;
 	}
 	
 	

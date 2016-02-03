@@ -1,4 +1,4 @@
-package com.fl5.variousthings.blocks;
+package com.fl5.variousthings.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 
 import com.fl5.variousthings.tabs.VaiousThingsTabs;
 
-public class EnderSummoner extends Block
+public class BlockEnderSummoner extends Block
 {
-    public EnderSummoner()
+    public BlockEnderSummoner()
     {
         super(Material.rock); // experiment with different material types
         this.setCreativeTab(VaiousThingsTabs.tabVariousThings);

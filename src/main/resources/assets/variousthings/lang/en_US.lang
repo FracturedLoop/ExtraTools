@@ -17,6 +17,7 @@ tile.jump_booster.name=Jump Booster
 tile.levitator.name=Levitator
 tile.encased_torch.name=Encased Torch
 tile.ender_summoner.name=Ender Summoner
+tile.item_display.name=Item Display
 
 itemGroup.tabVariousThings=ExtraTools
 

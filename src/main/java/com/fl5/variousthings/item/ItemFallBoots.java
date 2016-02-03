@@ -1,4 +1,4 @@
-package com.fl5.variousthings.items;
+package com.fl5.variousthings.item;
 
 import com.fl5.variousthings.tabs.VaiousThingsTabs;
 

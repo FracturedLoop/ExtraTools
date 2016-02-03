@@ -6,15 +6,15 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.fl5.variousthings.helpers.RegisterHelper;
-import com.fl5.variousthings.items.ItemBasic;
-import com.fl5.variousthings.items.ItemBlazingAxe;
-import com.fl5.variousthings.items.ItemBlazingDiamond;
-import com.fl5.variousthings.items.ItemBlazingPickaxe;
-import com.fl5.variousthings.items.ItemBlazingShovel;
-import com.fl5.variousthings.items.ItemBlazingSword;
-import com.fl5.variousthings.items.ItemFallBoots;
-import com.fl5.variousthings.items.ItemNightGoggles;
-import com.fl5.variousthings.items.ItemProtoSword;
+import com.fl5.variousthings.item.ItemBasic;
+import com.fl5.variousthings.item.ItemBlazingAxe;
+import com.fl5.variousthings.item.ItemBlazingDiamond;
+import com.fl5.variousthings.item.ItemBlazingPickaxe;
+import com.fl5.variousthings.item.ItemBlazingShovel;
+import com.fl5.variousthings.item.ItemBlazingSword;
+import com.fl5.variousthings.item.ItemFallBoots;
+import com.fl5.variousthings.item.ItemNightGoggles;
+import com.fl5.variousthings.item.ItemProtoSword;
 
 public final class VariousThingsItems {
 
