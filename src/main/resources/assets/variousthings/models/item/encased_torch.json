@@ -1,13 +1,15 @@
 {
-    "parent": "builtin/generated",
-    "textures": {
-        "layer0": "variousthings:items/encased_torch"
-    },
+    "parent": "variousthings:block/encased_torch",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
             "translation": [ 0, 1.5, -2.75 ],
             "scale": [ 0.375, 0.375, 0.375 ]
+        },
+        "gui": {
+            "rotation": [ 0, 10, 0 ],
+            "translation": [ 0, 0, 0]
+            
         }
     }
 }
